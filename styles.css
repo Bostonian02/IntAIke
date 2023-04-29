@@ -1,0 +1,30 @@
+body{
+    background-image: linear-gradient(to right, #115099 , #b3c9df);
+    text-align: center;
+    color:#fff;
+}
+
+#Mmlogo{
+    position: absolute;
+    bottom:10px;
+    right:10px;
+}
+
+#logoBox{
+    color:#115099;
+}
+
+#logoBox{
+    background-color: #fceb09;
+    margin:auto;
+    width:50vw;
+    height:20vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#ButtonBox{
+    width:35vw;
+    margin:auto;
+}
