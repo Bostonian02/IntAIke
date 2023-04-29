@@ -4,12 +4,21 @@
    --MMBlue:#115099;
 }
 
+#topBar{
+   background-color: var(--MMBlue);
+   height: 40px;
+}
+
+#textLogo{
+   height: 30px;
+}
+
 #inputBar{
    position: absolute;
    bottom: 0px;
    width: 100%;
    display: inline-block;
-   background-color: var(--MMNavy);
+   background-color: var(--MMBlue);
 }
 
 #userInput{
@@ -18,4 +27,5 @@
 
 #sendButton{
    display: inline-block;
+   background-color: var(--MMyellow);
 }
