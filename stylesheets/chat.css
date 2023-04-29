@@ -2,6 +2,15 @@
    --MMyellow: #fceb09;
    --MMNavy:#132a3e;
    --MMBlue:#115099;
+   --MMLightBlue:#b3c9df;
+}
+
+body{
+   margin:0px;
+}
+
+#Mmlogo{
+   height: 50%;
 }
 
 #topBar{
@@ -14,11 +23,12 @@
 }
 
 #inputBar{
-   position: absolute;
+   position: relative;
    bottom: 0px;
    width: 100%;
    display: inline-block;
    background-color: var(--MMBlue);
+   margin-left:0;
 }
 
 #userInput{
@@ -28,4 +38,27 @@
 #sendButton{
    display: inline-block;
    background-color: var(--MMyellow);
+}
+
+#chatSection{
+   width:100%;
+   display: inline-flex;
+}
+
+.message{
+   padding:10px;
+   padding-left: 20px;
+   padding-right: 20px;
+   border-radius: 20px;
+   width:fit-content;
+   max-width:30%;   
+   overflow-wrap: break-word;
+   margin-bottom:10px;
+}
+.user{
+   background-color:var(--MMLightBlue);
+   color:white;
+   text-align: left;
+   margin-right: 0;
+   margin-left: auto;
 }
