@@ -4,6 +4,18 @@
    --MMBlue:#115099;
 }
 
-#Mmlogo{
-   height: 50%;
+#inputBar{
+   position: absolute;
+   bottom: 0px;
+   width: 100%;
+   display: inline-block;
+   background-color: var(--MMNavy);
+}
+
+#userInput{
+   display: inline-block;
+}
+
+#sendButton{
+   display: inline-block;
 }
