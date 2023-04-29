@@ -1,0 +1,98 @@
+:root{
+    --MMyellow: #fceb09;
+    --MMNavy:#132a3e;
+    --MMBlue:#115099;
+}
+
+body{
+    background-image: linear-gradient(to right, var(--MMNavy) , var(--MMBlue));
+    background-color: var(--MMNavy);
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+select{
+    height:7vh;
+    font-size:2.25em;  
+    background-color: transparent;
+    color:var(--MMyellow);
+    border-color: var(--MMyellow);
+    border-radius: 17px;
+}
+
+.dropdown{
+    
+}
+
+option{
+    background-color: transparent;
+}
+
+#Mmlogo{
+    /* position: absolute;
+    bottom:10px;
+    right:10px; */
+}
+
+#plug{
+    align-content: baseline;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+#logoBox{
+    color:var(--MMBlue);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+#logoBox{
+    /* background-color: #fceb09; */
+    margin:auto;
+    width:50vw;
+    height:20vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#ButtonBox{
+    width:35vw;
+    margin:auto;
+}
+
+.playfair{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.openSans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.white{
+    color:#fff;
+}
+
+.yellow{
+    color:var(--MMyellow);
+}
+
+.roundButton{
+    background-color: var(--MMyellow);
+    color:var(--MMNavy);
+    font-size: 1.5em;
+    border:none;
+    border-radius: 30px;
+    padding:10px;
+    text-decoration: none;
+}
+
+.roundButton:hover{
+    background-color: transparent;
+    color:var(--MMyellow);
+    font-size: 1.5em;
+    border-color:var(--MMyellow);
+    border:1px solid var(--MMyellow);
+    padding:10px;
+}

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,52 +9,56 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="https://brand.umich.edu/assets/brand/style-guide/logo-guidelines/U-M_Logo-Hex.png" type="image/x-icon" />
+        <link rel="stylesheet" href="stylesheets/styles.css">
     </head>
     <body>
             <div id="logoBox">
-                <h1>Your Logo Here</h1>
+                <h1 class="playfair white">Hello, and welcome to:</h1>
+                <h1 class="yellow">Your Logo Here</h1>
+                <p id="plug" class="white openSans">A (potential) <img id="Mmlogo" src="images/Morgan and Morgan Logo.svg"/> technology</p>
             </div>
-            <h2>Hello, please select your case type.</h2>
+            <h2 class="white">Please select your case type.</h2>
             <form>
-                <select  name="caseType" id="caseType">
-                    <option value="Animal Attack">Animal Attack</option>
-                    <option value="Business Dispute">Business Dispute</option>
-                    <option selected value="Car Accident">Car Accident</option>
-                    <option value="Civil Rights">Civil Rights</option>
-                    <option value="Childhood Sex Abuse">Childhood Sex Abuse</option>
-                    <option value="Class Action">Class Action</option>
-                    <option value="Dangerous Drugs">Dangerous Drugs</option>
-                    <option value="Data Breach">Data Breach</option>
-                    <option value="Defective Products">Defective Products</option>
-                    <option value="Employment Issue">Employment Issue</option>
-                    <option value="Environmental Issues">Environmental Issues</option>
-                    <option value="Fire Injury">Fire Injury</option>
-                    <option value="Hurt at Work">Hurt at Work</option>
-                    <option value="Insurance Dispute">Insurance Dispute</option>
-                    <option value="Medical Injury">Medical Injury</option>
-                    <option value="Mesothelioma">Mesothelioma</option>
-                    <option value="Nursing Home">Nursing Home</option>
-                    <option value="Other Injury">Other Injury</option>
-                    <option value="Product Injury">Product Injury</option>
-                    <option value="Social Security">Social Security</option>
-                    <option value="Slip &amp; Fall">Slip &amp; Fall</option>
-                    <option value="Unpaid Wages/Earnings">Unpaid Wages/Earnings</option>
-                    <option value="Unwanted Phone Calls">Unwanted Phone Calls</option>
-                    <option value="Veteran Disability">Veteran Disability</option>
-                    <option value="Warranty Claim">Warranty Claim</option>
-                    <option value="Workplace Discrimination">Workplace Discrimination</option>
-                    <option value="Other">Other</option>
-                    <option value="Camp Lejeune">Camp Lejeune</option>
-                </select>
-                <br>
-                <button  onclick="alert('Type = '+document.getElementById('caseType').value)">Confirm</button>
-                <button onclick="alert('Going Elsewhere')">Don't See Your Case Type?</button>
+                <div class="dropdown">
+                    <select  name="caseType" id="caseType">
+                        <option value="Animal Attack">Animal Attack</option>
+                        <option value="Business Dispute">Business Dispute</option>
+                        <option selected value="Car Accident">Car Accident</option>
+                        <option value="Civil Rights">Civil Rights</option>
+                        <option value="Childhood Sex Abuse">Childhood Sex Abuse</option>
+                        <option value="Class Action">Class Action</option>
+                        <option value="Dangerous Drugs">Dangerous Drugs</option>
+                        <option value="Data Breach">Data Breach</option>
+                        <option value="Defective Products">Defective Products</option>
+                        <option value="Employment Issue">Employment Issue</option>
+                        <option value="Environmental Issues">Environmental Issues</option>
+                        <option value="Fire Injury">Fire Injury</option>
+                        <option value="Hurt at Work">Hurt at Work</option>
+                        <option value="Insurance Dispute">Insurance Dispute</option>
+                        <option value="Medical Injury">Medical Injury</option>
+                        <option value="Mesothelioma">Mesothelioma</option>
+                        <option value="Nursing Home">Nursing Home</option>
+                        <option value="Other Injury">Other Injury</option>
+                        <option value="Product Injury">Product Injury</option>
+                        <option value="Social Security">Social Security</option>
+                        <option value="Slip &amp; Fall">Slip &amp; Fall</option>
+                        <option value="Unpaid Wages/Earnings">Unpaid Wages/Earnings</option>
+                        <option value="Unwanted Phone Calls">Unwanted Phone Calls</option>
+                        <option value="Veteran Disability">Veteran Disability</option>
+                        <option value="Warranty Claim">Warranty Claim</option>
+                        <option value="Workplace Discrimination">Workplace Discrimination</option>
+                        <option value="Other">Other</option>
+                        <option value="Camp Lejeune">Camp Lejeune</option>
+                    </select>
+                </div>
+                <br><br>
+                <button class="roundButton playfair" onclick="alert('Type = '+document.getElementById('caseType').value)">Confirm</button>
+                <a class="roundButton playfair" href="referrals.html">Don't See Your Case Type?</a>
             </form>
             <div id="ButtonBox">
             </div>
-            <img id="Mmlogo" src="images/Morgan and Morgan Logo.svg"/>
         <script src="" async defer></script>
     </body>
 </html>
