@@ -18,6 +18,7 @@ select{
     color:var(--MMyellow);
     border-color: var(--MMyellow);
     border-radius: 17px;
+    appearance: none;
 }
 
 .dropdown{
