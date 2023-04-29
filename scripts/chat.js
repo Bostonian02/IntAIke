@@ -8,7 +8,7 @@ const postMessage = async () => {
     if(chatBar.value === "")
         return;
     var message = makeMessage(chatBar.value, USER);
-    chatSection.innerHTML+=message;
+    chatSection.innerHTML+=message+"<br><br>";
 
     var obj = { message: chatBar.value }
     var js = JSON.stringify(obj)
@@ -32,7 +32,7 @@ function makeMessage(message, user){
     if(message === "")
         return null;
     var className;
-    user ? className="userMessage" : className="botMessage";
+    user ? className="user message" : className="bot message";
     var bubble = '<div class="'+className+'">'+message+'</div>';
     return bubble;
 }
