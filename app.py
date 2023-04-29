@@ -3,7 +3,7 @@ from flask import Flask, render_template
 from flask_cors import CORS
 import sqlite3 as sql
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 CORS(app)
 
 @app.route("/")
