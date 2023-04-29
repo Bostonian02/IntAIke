@@ -15,17 +15,18 @@
     </head>
     <body>
             <div id="logoBox">
-                <h1 class="playfair white">Hello, and welcome to:</h1>
-                <h1 class="yellow">Your Logo Here</h1>
+                <h1 id="welcome" class="openSans white">Hello, welcome to:</h1>
+                <img id="textLogo" src="images/QuickCaseLogoText.png"/>
                 <p id="plug" class="white openSans">A (potential) <img id="Mmlogo" src="images/Morgan and Morgan Logo.svg"/> technology</p>
             </div>
             <h2 class="white">Please select your case type.</h2>
             <form>
                 <div class="dropdown">
                     <select  name="caseType" id="caseType">
+                        <option disabled selected value="">Select Case Type</option>
                         <option value="Animal Attack">Animal Attack</option>
                         <option value="Business Dispute">Business Dispute</option>
-                        <option selected value="Car Accident">Car Accident</option>
+                        <option value="Car Accident">Car Accident</option>
                         <option value="Civil Rights">Civil Rights</option>
                         <option value="Childhood Sex Abuse">Childhood Sex Abuse</option>
                         <option value="Class Action">Class Action</option>

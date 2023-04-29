@@ -31,31 +31,38 @@ option{
 }
 
 #Mmlogo{
-    /* position: absolute;
-    bottom:10px;
-    right:10px; */
+height: 50%;
+}
+
+
+#welcome{
+    height:10%;
+    margin-top:0px;
+}
+
+#textLogo{
+    height:70%;
+    /* min-width: 80%;
+    max-width: fit-content; */
 }
 
 #plug{
-    align-content: baseline;
-    justify-content: baseline;
-    align-items: baseline;
+    font-size: small;
+    height:10%;
 }
-
 #logoBox{
+    /* background-color: #fceb09; */
     color:var(--MMBlue);
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-}
-
-#logoBox{
-    /* background-color: #fceb09; */
+    height:45vh !important;
     margin:auto;
-    width:50vw;
-    height:20vh;
+    height:auto;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom:5vh;
+    margin-top:10vh;
 }
 
 #ButtonBox{
@@ -88,6 +95,8 @@ option{
     border-radius: 30px;
     padding:10px;
     text-decoration: none;
+    transition: 0.15s;
+
 }
 
 .roundButton:hover{
