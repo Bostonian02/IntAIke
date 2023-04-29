@@ -2,8 +2,21 @@
    --MMyellow: #fceb09;
    --MMNavy:#132a3e;
    --MMBlue:#115099;
+   --MMLightBlue:#b3c9df;
 }
 
 #Mmlogo{
    height: 50%;
+}
+
+.userMessage{
+   background-color:var(--MMLightBlue);
+   color:white;
+   padding:10px;
+   padding-left: 20px;
+   padding-right: 20px;
+   border-radius: 20px;
+   width:fit-content;
+   max-width:30%;
+   text-align: right;
 }
