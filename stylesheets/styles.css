@@ -19,6 +19,7 @@ select{
     border-color: var(--MMyellow);
     border-radius: 17px;
     appearance: none;
+    padding-left: 5px;
 }
 
 .dropdown{
