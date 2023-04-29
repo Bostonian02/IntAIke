@@ -16,8 +16,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Define which tools the agent can use to answer user queries
-search = SerpAPIWrapper()
-db = SQLDatabase.from_uri("sqlite:///C:/users/saget/Desktop/Hackathon/notebooks/Intakes.db")
+db = SQLDatabase.from_uri("sqlite:///Intakes.db")
 toolkit = SQLDatabaseToolkit(llm=OpenAI(temperature=0), db=db)
 
 # Tools
@@ -62,6 +61,7 @@ The client is the user filling out their own information, so you should address 
 Start by querying the database to determine what items in each table need to be filled out.
 Fill out a row by asking a human user for the data. Once you have that data, add it to the database. Continue asking the user for data until you are done.
 You are done once you have filled out one row in the Clients table and one row in the Incidents table.
+YOU DO NOT NEED THE CLIENT'S PREFFERED METHOD OF COMMUNICATION!!!
 You have access to the following tools:
 
 {tools}
