@@ -1,5 +1,5 @@
 :root{
-    --MMyellow: #fceb09;
+    --MMYellow: #fceb09;
     --MMNavy:#132a3e;
     --MMBlue:#115099;
 }
@@ -16,8 +16,8 @@ select{
     height:7vh;
     font-size:2.25em;  
     background-color: transparent;
-    color:var(--MMyellow);
-    border-color: var(--MMyellow);
+    color:var(--MMYellow);
+    border-color: var(--MMYellow);
     border-radius: 17px;
     padding-left: 5px;
 }
@@ -84,11 +84,11 @@ height: 50%;
 }
 
 .yellow{
-    color:var(--MMyellow);
+    color:var(--MMYellow);
 }
 
 .roundButton{
-    background-color: var(--MMyellow);
+    background-color: var(--MMYellow);
     color:var(--MMNavy);
     font-size: 1.5em;
     border:none;
@@ -101,9 +101,9 @@ height: 50%;
 
 .roundButton:hover{
     background-color: transparent;
-    color:var(--MMyellow);
+    color:var(--MMYellow);
     font-size: 1.5em;
-    border-color:var(--MMyellow);
-    border:1px solid var(--MMyellow);
+    border-color:var(--MMYellow);
+    border:1px solid var(--MMYellow);
     padding:10px;
 }
