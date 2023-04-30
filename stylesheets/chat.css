@@ -50,7 +50,7 @@ body{
 
 #sendButton{
    display: inline-block;
-   background-color: var(--MMyellow);
+   background-color: var(--MMYellow);
    border-radius: 50%;
    padding-top:
 }
