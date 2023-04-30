@@ -15,16 +15,20 @@ body{
 
 #topBar{
    background-color: var(--MMBlue);
-   height: 40px;
+   height: 50px;
 }
 
 #textLogo{
-   height: 20px;
+   padding-top: 10px;
+   padding-left: 20px;
+   padding-bottom: 10px;
+   height: 30px;
 }
 
 #inputBar{
    position: relative;
    bottom: 0px;
+   height: 50px;
    width: 100%;
    /* display: inline-block; */
    background-color: var(--MMBlue);
@@ -38,6 +42,8 @@ body{
 #sendButton{
    display: inline-block;
    background-color: var(--MMyellow);
+   border-radius: 50%;
+   padding-top:
 }
 
 #chatSection{
