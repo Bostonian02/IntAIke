@@ -70,9 +70,14 @@ body{
 }
 
 #chatSection{
-   width:99vw;
+   width:auto;
    height:82vh;
-   padding:1vh;
+   padding-top:1vh;
+   padding-bottom:1vh;
+   padding-left: 2vw;
+   padding-right:2vw;
+   overflow-y:scroll;
+   margin-right:0px;
 }
 
 .message{
