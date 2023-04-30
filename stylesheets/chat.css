@@ -29,6 +29,7 @@ body{
 #inputBar{
    position: relative;
    bottom: 0px;
+   height: 50px;
    width: 100%;
    display:inline-flex;
    background-color: var(--MMBlue);
