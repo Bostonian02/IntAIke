@@ -22,158 +22,58 @@
                 <img id="textLogo" src="images/QuickCaseLogoText.png"/>
                 <p id="plug" class="white openSans">A (potential) <img id="Mmlogo" src="images/Morgan and Morgan Logo.svg"/> technology</p>
             </div> -->
-            <form action="chat.html" id="intakeForm">
-                <h2 class="white">Please enter some personal information.</h2>
-                <input class="formField" type="text" id="FirstName" name="FirstName" placeholder="First Name">
-                <input class="formField" type="text" id="LastName" name="LastName" placeholder="Last Name">
-                <br>
-                <input class="formField" type="date" id="BirthDate" name="BirthDate" placeholder="Date of Birth">
-                <input class="formField" type="text" id="SocialSecurity" name="SocialSecurity" placeholder="Social Security Number">
-                <br>
-                <input class="formField" type="text" id="Address" name="Address" placeholder="Residential Address">
-                <input class="formField" type="33966" id="ZipCode" name="ZipCode" placeholder="Zip Code">
-                <br>
-                <input class="formField" type="text" id="Email" name="Email" placeholder="Email Address">
-                <br>
-                <input class="formField" type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Phone Number">
-                <br>
-                <div>
-                    <label class="formLabel" id="InsuredCheckLabel" for="InsuredCheck">Are you insured?</label>
-                    <input class="formField" type="checkbox" id="InsuredCheck" name="InsuredCheck" onclick="hideDiv('InsuranceHolderz')">
-                </div>
-             
-                <div id="InsuranceHolder">
-                    <input class="formField" type="text" id="InsuranceName" name="InsuranceName"  placeholder="Insurance Company Name">
-                    <br>
-                    <input class="formField" type="text" id="InsuranceGroupNum" name="InsuranceGroupNum" placeholder="Group Number">
-                    <br>
-                    <input class="formField" type="text" id="InsuranceMemberID" name="InsuranceMemberID"  placeholder="Member ID">
-                </div>
-                <br><br>
-                <button class="roundButton playfair" onclick="alert('Type = '+document.getElementById('caseType').value)">Confirm</button>
-            </form>
-            
-            <!-- <div class="formHolder container align-center" id="incidentForm">
-                <form action="chat.html" id="intakeForm">
-                    <h2 class="white">Please enter some information about the incident.</h2>
-                    <div class="dropdown row">
-                        <div class="col-1"></div>
-                        <select class="formField col-10" name="caseType" id="caseType">
-                            <option disabled selected value="">Select Case Type</option>
-                            <option value="Animal Attack">Animal Attack</option>
-                            <option value="Business Dispute">Business Dispute</option>
-                            <option value="Car Accident">Car Accident</option>
-                            <option value="Civil Rights">Civil Rights</option>
-                            <option value="Childhood Sex Abuse">Childhood Sex Abuse</option>
-                            <option value="Class Action">Class Action</option>
-                            <option value="Dangerous Drugs">Dangerous Drugs</option>
-                            <option value="Data Breach">Data Breach</option>
-                            <option value="Defective Products">Defective Products</option>
-                            <option value="Employment Issue">Employment Issue</option>
-                            <option value="Environmental Issues">Environmental Issues</option>
-                            <option value="Fire Injury">Fire Injury</option>
-                            <option value="Hurt at Work">Hurt at Work</option>
-                            <option value="Insurance Dispute">Insurance Dispute</option>
-                            <option value="Medical Injury">Medical Injury</option>
-                            <option value="Mesothelioma">Mesothelioma</option>
-                            <option value="Nursing Home">Nursing Home</option>
-                            <option value="Other Injury">Other Injury</option>
-                            <option value="Product Injury">Product Injury</option>
-                            <option value="Social Security">Social Security</option>
-                            <option value="Slip &amp; Fall">Slip &amp; Fall</option>
-                            <option value="Unpaid Wages/Earnings">Unpaid Wages/Earnings</option>
-                            <option value="Unwanted Phone Calls">Unwanted Phone Calls</option>
-                            <option value="Veteran Disability">Veteran Disability</option>
-                            <option value="Warranty Claim">Warranty Claim</option>
-                            <option value="Workplace Discrimination">Workplace Discrimination</option>
-                            <option value="Other">Other</option>
-                            <option value="Camp Lejeune">Camp Lejeune</option>
-                        </select>
-                        <div class="col-1"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1"></div>
-                        <input class="formField form-text d-inline-flex col-6" type="date" id="IncidentDate" name="Incident Date" placeholder="mm/dd/yy">
-                        <div class="col"></div>
-                        <input class="formField form-text d-inline-flex col-3" type="time" id="IncidentTime" name="IncidentTime" placeholder="Estimated Time">
-                        <div class="col-1"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1"></div>
-                        <input class="formField form-text d-inline-flex col-7" type="text" id="IncidentLocation" name="IncidentLocation" placeholder="Approximate Address">
-                        <div class="col-1"></div>
-                        <input class="formField form-text d-inline-flex col" type="number" id="IncidentZip" name="IncidentZip" placeholder="ZIP">
-                        <div class="col-1"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-1"></div>
-                        <input class="formField form-textarea d-inline-flex col-10" type="textarea" id="IncidentDescription" name="IncidentDescription" placeholder="Description">
-                        <div class="col-1"></div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-1"></div>   
-                        <label class="formLabel col" id="PoliceInsuredLabel" for="PoliceInsured">Has a Police report been filed?</label>
-                        <input class="formField col" type="checkbox" id="PoliceInsured" onclick="hideDiv('PoliceForm')" name="PoliceInsured">
-                        <div class="col-1"></div>
-                    </div>
-                    <div class="row" id="PoliceForm">
-                        <div class="col-1"></div>
-                        <input class="formField form-text d-inline-flex col-10" type="text" id="CaseNumber" name="CaseNumber" placeholder="Case Number">
-                        <div class="col-1"></div>
-                    </div>
+            <div class="formHolder">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10">
+                        <form action="incidentForm.html" id="intakeForm">
+                            <h2 class="white">Please enter some personal information.</h2>
+                            <div class="row">
+                                <input class="formField d-inline-flex col" type="text" id="FirstName" name="FirstName" placeholder="First Name">
+                                <div class="col-1"></div>
+                                <input class="formField d-inline-flex col" type="text" id="LastName" name="LastName" placeholder="Last Name">
+                            </div>
+                            <div class="row">
+                                <div class="col-2"></div>
+                                <input class="formField d-inline-flex col-3" type="date" id="BirthDate" name="BirthDate" placeholder="Date of Birth">
+                                <div class="col-1"></div>
+                                <input class="formField d-inline-flex col-3" type="text" id="SocialSecurity" name="SocialSecurity" placeholder="Social Security #">
+                                <div class="col-2"></div>
+                            </div>
+                            <div class="row">
+                                <input class="formField d-inline-flex col-8" type="text" id="Address" name="Address" placeholder="Residential Address">
+                                <div class="col-1"></div>
+                                <input class="formField d-inline-flex col-3" type="33966" id="ZipCode" name="ZipCode" placeholder="Zip Code">
+                            </div>
+                            
+                            <div class="row">
+                                <input class="formField" type="text" id="Email" name="Email" placeholder="Email Address">
+                                <br>
+                                <input class="formField" type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Phone Number">
+                                <br>
+                            </div>
 
-                    <label class="formLabel" id="InjuredLabel" for="Injured">Were you injured?</label>
-                    <input class="formField" type="checkbox" id="Injured" name="Injured" onclick="hideDiv('MedicalForm')"><br>
-                    <div id="MedicalForm">
-                        <input class="formField form-text d-inline-flex" type="text" id="MedVisit" name="MedVisit" placeholder="Number of Medical Visits">
-                        <br>
-                        <input class="formField form-text d-inline-flex" type="text" id="PainScale" name="PainScale" placeholder="Pain from 1-10">
-                        <br>
-                        <input class="formField form-text d-inline-flex" type="text" id="NegativeAffects" name="NegativeAffects" placeholder="Negative Affects">
-                        <br>
+                            <div>
+                                <label class="formLabel" id="InsuredCheckLabel" for="InsuredCheck">Are you insured?</label>
+                                <input class="formField checker" type="checkbox" id="InsuredCheck" name="InsuredCheck" onclick="hideDiv('InsuranceHolderz')">
+                            </div>
+                            
+                            <div id="InsuranceHolder" class="row">
+                                <input class="formField col-12" type="text" id="InsuranceName" name="InsuranceName"  placeholder="Insurance Company Name">
+                                <br>
+                                <input class="formField col-12" type="text" id="InsuranceGroupNum" name="InsuranceGroupNum" placeholder="Group Number">
+                                <br>
+                                <input class="formField col-12" type="text" id="InsuranceMemberID" name="InsuranceMemberID"  placeholder="Member ID">
+                            </div>
+                            <br>
+                            <button class="roundButton playfair" onclick="alert('Type = '+document.getElementById('caseType').value)">Confirm</button>
+                        </form>
                     </div>
                     
-                    <button class="roundButton playfair" onclick="alert('Type = '+document.getElementById('caseType').value)">Confirm</button>
-                </form>
-            </div> -->
-            <div id="ButtonBox">
-                <!-- <a class="roundButton playfair" href="referrals.html">Don't See Your Case Type?</a> -->
+                    <div class="col-1"></div>
+                </div>
             </div>
-            <!-- <div class="dropdown">
-                <select  name="caseType" id="caseType">
-                    <option disabled selected value="">Select Case Type</option>
-                    <option value="Animal Attack">Animal Attack</option>
-                    <option value="Business Dispute">Business Dispute</option>
-                    <option value="Car Accident">Car Accident</option>
-                    <option value="Civil Rights">Civil Rights</option>
-                    <option value="Childhood Sex Abuse">Childhood Sex Abuse</option>
-                    <option value="Class Action">Class Action</option>
-                    <option value="Dangerous Drugs">Dangerous Drugs</option>
-                    <option value="Data Breach">Data Breach</option>
-                    <option value="Defective Products">Defective Products</option>
-                    <option value="Employment Issue">Employment Issue</option>
-                    <option value="Environmental Issues">Environmental Issues</option>
-                    <option value="Fire Injury">Fire Injury</option>
-                    <option value="Hurt at Work">Hurt at Work</option>
-                    <option value="Insurance Dispute">Insurance Dispute</option>
-                    <option value="Medical Injury">Medical Injury</option>
-                    <option value="Mesothelioma">Mesothelioma</option>
-                    <option value="Nursing Home">Nursing Home</option>
-                    <option value="Other Injury">Other Injury</option>
-                    <option value="Product Injury">Product Injury</option>
-                    <option value="Social Security">Social Security</option>
-                    <option value="Slip &amp; Fall">Slip &amp; Fall</option>
-                    <option value="Unpaid Wages/Earnings">Unpaid Wages/Earnings</option>
-                    <option value="Unwanted Phone Calls">Unwanted Phone Calls</option>
-                    <option value="Veteran Disability">Veteran Disability</option>
-                    <option value="Warranty Claim">Warranty Claim</option>
-                    <option value="Workplace Discrimination">Workplace Discrimination</option>
-                    <option value="Other">Other</option>
-                    <option value="Camp Lejeune">Camp Lejeune</option>
-                </select>
-                <br>
-            </div> -->
+        
             <script src="" async defer></script>
     </body>
 </html>
