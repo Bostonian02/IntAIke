@@ -53,7 +53,9 @@ body{
    padding-right:10px;
    border-radius:20px 0px 0px 20px;
    margin-left:5%;
-   margin-right:0px !important;
+   margin-right:-5px;
+   vertical-align: middle;
+   border:none;
 }
 
 #sendButton{
@@ -61,7 +63,9 @@ body{
    background-color: var(--MMYellow);
    border-radius:0px 20px 20px 0px;
    margin-right:5%;
-   margin-left:0px !important;
+   margin-left:0px;
+   border:none;
+   height:32px;
    vertical-align: middle;
 }
 
