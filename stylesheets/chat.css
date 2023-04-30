@@ -54,6 +54,7 @@ body{
    border-radius:20px 0px 0px 20px;
    margin-left:5%;
    margin-right:0px !important;
+   vertical-align: middle;
 }
 
 #sendButton{
