@@ -6,16 +6,17 @@ from langchain.agents.agent_toolkits import SQLDatabaseToolkit
 from langchain.sql_database import SQLDatabase
 from langchain.llms.openai import OpenAI
 # import wolfram alpha shit for the wolfram alpha tool
-from langchain.utilities.wolfram_alpha import WolframAlphaAPIWrapper
+# from langchain.utilities.wolfram_alpha import WolframAlphaAPIWrapper
 from dotenv import load_dotenv
+import sqlite3
 
 # Load API Keys
 load_dotenv()
 
-db = SQLDatabase.from_uri("sqlite:///C:/users/saget/Desktop/Hackathon/notebooks/Cases.db")
+db = SQLDatabase.from_uri("sqlite:///Cases.db")
 toolkit = SQLDatabaseToolkit(llm=OpenAI(temperature=0), db=db)
 # Tools
-wolfram = WolframAlphaAPIWrapper()
+# wolfram = WolframAlphaAPIWrapper()
 SQL_agent_executor = create_sql_agent(
     llm=OpenAI(temperature=0),
     toolkit=toolkit,
@@ -60,5 +61,15 @@ agent = ZeroShotAgent(llm_chain=llm_chain, allowed_tools=tool_names)
 
 agent_executor = AgentExecutor.from_agent_and_tools(agent=agent, tools=tools, verbose=True)
 
+# Grab the category from the SQL database
+connection = sqlite3.connect('Intakes.db')
+cursor = connection.cursor()
+cursor.execute('SELECT CASE_TYPE FROM Incidents')
+results = cursor.fetchall()
+
+cursor.close()
+connection.close()
+
+prompt = "Based on the amount of money won stored in the database, estimate how much money could be won from a case where the type is " + results[0][0]
 # Run the agent
-agent_executor.run("Based on the ammount of money won stored in the database, estimate how much money could be won from a car accident case where the plaintiff was T-boned")
+agent_executor.run(prompt)
