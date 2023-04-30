@@ -1,64 +1,75 @@
+<!DOCTYPE html>
 
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Quick Case</title>
+        <title>QuickCase</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="icon" href="{{ url_for('static', filename='images/QuickCaseFavicon.png') }}" type="image/x-icon" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
+        <link rel="icon" href="{{url_for('static', filename='images/QuickCaseFavicon.png')}}" type="image/x-icon" />
+        <link rel="stylesheet" href="{{url_for('static', filename='stylesheets/styles.css')}}">
     </head>
     <body>
+        <script src="{{url_for('static', filename='scripts/movement.js')}}"></script>
+        <div class="" id="contrastContainer">
             <div id="logoBox">
-                <h1 id="welcome" class="openSans white">Hello, welcome to:</h1>
-                <img id="textLogo" src="{{ url_for('static', filename='images/QuickCaseLogoText.png') }}"/>
-                <p id="plug" class="white openSans">A (potential) <img id="Mmlogo" src="{{ url_for('static', filename='images/Morgan and Morgan Logo.svg') }}"/> technology</p>
+                <h1 id="welcome" class="openSans shadowLight white">Hello, welcome to:</h1>
+                <img id="textLogo" src="{{url_for('static', filename='images/QuickCaseLogoText.png')}}"/>
+                <p id="plug" class="white openSans shadowThin">A (potentially) <img id="Mmlogo" src="{{url_for('static', filename='images/Morgan and Morgan Logo.svg')}}"/> technology</p>
             </div>
-            <h2 class="white">Please select your case type.</h2>
-            <form action="/inputForm">
-                <div class="dropdown">
-                    <select  name="caseType" id="caseType">
-                        <option disabled selected value="">Select Case Type</option>
-                        <option value="Animal Attack">Animal Attack</option>
-                        <option value="Business Dispute">Business Dispute</option>
-                        <option value="Car Accident">Car Accident</option>
-                        <option value="Civil Rights">Civil Rights</option>
-                        <option value="Childhood Sex Abuse">Childhood Sex Abuse</option>
-                        <option value="Class Action">Class Action</option>
-                        <option value="Dangerous Drugs">Dangerous Drugs</option>
-                        <option value="Data Breach">Data Breach</option>
-                        <option value="Defective Products">Defective Products</option>
-                        <option value="Employment Issue">Employment Issue</option>
-                        <option value="Environmental Issues">Environmental Issues</option>
-                        <option value="Fire Injury">Fire Injury</option>
-                        <option value="Hurt at Work">Hurt at Work</option>
-                        <option value="Insurance Dispute">Insurance Dispute</option>
-                        <option value="Medical Injury">Medical Injury</option>
-                        <option value="Mesothelioma">Mesothelioma</option>
-                        <option value="Nursing Home">Nursing Home</option>
-                        <option value="Other Injury">Other Injury</option>
-                        <option value="Product Injury">Product Injury</option>
-                        <option value="Social Security">Social Security</option>
-                        <option value="Slip &amp; Fall">Slip &amp; Fall</option>
-                        <option value="Unpaid Wages/Earnings">Unpaid Wages/Earnings</option>
-                        <option value="Unwanted Phone Calls">Unwanted Phone Calls</option>
-                        <option value="Veteran Disability">Veteran Disability</option>
-                        <option value="Warranty Claim">Warranty Claim</option>
-                        <option value="Workplace Discrimination">Workplace Discrimination</option>
-                        <option value="Other">Other</option>
-                        <option value="Camp Lejeune">Camp Lejeune</option>
-                    </select>
+            <form action="/inputForm" id="caseTypeForm">
+                <div id="caseSelector" class="">
+                    <h2 class="white shadowThin">Please select your case type.</h2>
+                    <div class="dropdown">
+                        <select  name="caseType" id="caseType">
+                            <option disabled selected value="">Select Case Type</option>
+                            <option value="Animal Attack">Animal Attack</option>
+                            <option value="Business Dispute">Business Dispute</option>
+                            <option value="Car Accident">Car Accident</option>
+                            <option value="Civil Rights">Civil Rights</option>
+                            <option value="Childhood Sex Abuse">Childhood Sex Abuse</option>
+                            <option value="Class Action">Class Action</option>
+                            <option value="Dangerous Drugs">Dangerous Drugs</option>
+                            <option value="Data Breach">Data Breach</option>
+                            <option value="Defective Products">Defective Products</option>
+                            <option value="Employment Issue">Employment Issue</option>
+                            <option value="Environmental Issues">Environmental Issues</option>
+                            <option value="Fire Injury">Fire Injury</option>
+                            <option value="Hurt at Work">Hurt at Work</option>
+                            <option value="Insurance Dispute">Insurance Dispute</option>
+                            <option value="Medical Injury">Medical Injury</option>
+                            <option value="Mesothelioma">Mesothelioma</option>
+                            <option value="Nursing Home">Nursing Home</option>
+                            <option value="Other Injury">Other Injury</option>
+                            <option value="Product Injury">Product Injury</option>
+                            <option value="Social Security">Social Security</option>
+                            <option value="Slip &amp; Fall">Slip &amp; Fall</option>
+                            <option value="Unpaid Wages/Earnings">Unpaid Wages/Earnings</option>
+                            <option value="Unwanted Phone Calls">Unwanted Phone Calls</option>
+                            <option value="Veteran Disability">Veteran Disability</option>
+                            <option value="Warranty Claim">Warranty Claim</option>
+                            <option value="Workplace Discrimination">Workplace Discrimination</option>
+                            <option value="Other">Other</option>
+                            <option value="Camp Lejeune">Camp Lejeune</option>
+                        </select>
+                    </div>
+                    <br><br>
+                    <button class="roundButton playfair" onclick="event.preventDefault(); switchIn()">Confirm</button> &nbsp;&nbsp;
+                    <a class="roundButton playfair" href="/referrals">Don't See Your Case Type?</a>
                 </div>
-                <br><br>
-                <button class="roundButton playfair" onclick="alert('Type = '+document.getElementById('caseType').value)">Confirm</button>
-                <a class="roundButton playfair" href="http://127.0.0.1:5000/referrals">Don't See Your Case Type?</a>
+                <div id="intakeMethods">
+                    <h2 class="white shadowThin" style="display:block;">Please select your input method</h2>
+                    <div style="width:100%;"></div>
+                    <button class="playfair newButtons liner" onclick="event.preventDefault(); window.location.replace('/chat')"><img class="imgButton" src="{{url_for('static', filename='images/chaticon.png')}}"><br>Chatbot</button>
+                    <div class="spacer liner"></div>
+                    <button class="playfair newButtons liner" onclick=""><img class="imgButton" src="{{url_for('static', filename='images/formicon.png')}}"><br>Form Entry</button>
+                </div>
             </form>
-            <div id="ButtonBox">
-            </div>
+        </div>
         <script src="" async defer></script>
     </body>
 </html>

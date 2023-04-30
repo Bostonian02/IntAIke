@@ -10,10 +10,8 @@ from TrialBot import get_trial_prob
 app = Flask(__name__, template_folder='templates', static_folder='static')
 CORS(app)
 
-C_ID = 0
-
 def write_client_info(FirstName, LastName, BirthDate, SocialSecurity, Address, ZipCode, Email, PhoneNumber, Insured, InsuranceName, InsuranceGroupNum, InsuranceMemberID):
-    Client_ID = random.randint(1, 100000000)
+    Client_ID = 517
     C_ID = Client_ID
     connection = sql.connect('Intakes.db')
     cursor = connection.cursor()
@@ -29,7 +27,7 @@ def write_incident_info(Description, Case_Type, Date, Time, Location, Zip_Code, 
     connection = sql.connect('Intakes.db')
     cursor = connection.cursor()
     is_reported = 1 if Police_Report == 'on' else 0
-    sql_query = f'INSERT INTO Incidents(Incident_ID, Description, Case_Type, Date, Time, Location, Zip_Code, Client_Role, Police_Report, Police_Case_Number, Medical_Visits, Pain_Scale, Inability_Type, Client_ID) VALUES ({Incident_ID}, \'{Description}\', \'{Case_Type}\', \'{Date}\', \'{Time}\', \'{Location}\', \'{Zip_Code}\', \'{Client_Role}\', {is_reported}, \'{Police_Case_Number}\', {Medical_Visits}, {Pain_Scale}, \'{Inability_Type}\', {C_ID});'
+    sql_query = f'INSERT INTO Incidents(Incident_ID, Description, Case_Type, Date, Time, Location, Zip_Code, Client_Role, Police_Report, Police_Case_Number, Medical_Visits, Pain_Scale, Inability_Type, Client_ID) VALUES ({Incident_ID}, \'{Description}\', \'{Case_Type}\', \'{Date}\', \'{Time}\', \'{Location}\', \'{Zip_Code}\', \'{Client_Role}\', {is_reported}, \'{Police_Case_Number}\', {Medical_Visits}, {Pain_Scale}, \'{Inability_Type}\', 517);'
     cursor.execute(sql_query)
     connection.commit()
     cursor.close()
