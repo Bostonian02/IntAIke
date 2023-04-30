@@ -62,7 +62,7 @@ body{
    border-radius:0px 20px 20px 0px;
    margin-right:5%;
    margin-left:0px !important;
-
+   vertical-align: middle;
 }
 
 #chatSection{
