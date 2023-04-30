@@ -40,9 +40,9 @@ def get_trial_prob(case_type):
     # Prefix and suffix
     prefix="Answer the following questions as best you can. You have access to the following tools:"
     suffix="""Your goal is to give a rough estimate of the probability of a case going to trial based on the data in the database.
-    Start by making a list of cases and whether they have gone to trial. Make the list by pulling information  from the database column called Trial.
-    The column Trial is Boolean, represented by 0 as false and 1 as true.
-    Use the list to make your estimate. Your estimate does not have to be a perfect average of the values in the list. 
+    Start by making a list of related cases and whether they have gone to trial. Make the list by getting information  from the database column Trial.
+    The column Trial is Boolean, represented by 0 as false and 1 as true. You can represent those values as percentages with 0 meaning 0% and 1 meaning 100%. Add all of the 1s and 0s together, and then divide by the total number of items in the list you created in order to get the final percentage value.
+
     Remember to give a percentage as a string representing the likelyhood a case goes to trial as your final answer.
     If you encounter an error, make up a percentage and give that as a string as your final answer.
     Begin!
