@@ -10,14 +10,14 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="icon" href="images/QuickCaseFavicon.png" type="image/x-icon" />
-        <link rel="stylesheet" href="stylesheets/styles.css">
+        <link rel="icon" href="{{ url_for('static', filename='images/QuickCaseFavicon.png') }}" type="image/x-icon" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
     </head>
     <body>
             <div id="logoBox">
                 <h1 id="welcome" class="openSans white">Hello, welcome to:</h1>
-                <img id="textLogo" src="images/QuickCaseLogoText.png"/>
-                <p id="plug" class="white openSans">A (potential) <img id="Mmlogo" src="images/Morgan and Morgan Logo.svg"/> technology</p>
+                <img id="textLogo" src="{{ url_for('static', filename='images/QuickCaseLogoText.png') }}"/>
+                <p id="plug" class="white openSans">A (potential) <img id="Mmlogo" src="{{ url_for('static', filename='images/Morgan and Morgan Logo.svg') }}"/> technology</p>
             </div>
             <h2 class="white">Please select your case type.</h2>
             <form action="chat.html">
