@@ -10,7 +10,7 @@ from langchain.llms.openai import OpenAI
 from dotenv import load_dotenv
 import sqlite3
 
-def get_monetary_value():
+def get_monetary_value(case_type):
     # Load API Keys
     load_dotenv()
 
@@ -71,6 +71,6 @@ def get_monetary_value():
     # cursor.close()
     # connection.close()
 
-    prompt = "Based on the amount of money won stored in the database, estimate how much money could be won from a case where the type is Car Accident"
+    prompt = "Based on the amount of money won stored in the database, estimate how much money could be won from a case where the type is " + case_type
     # Run the agent
     return agent_executor.run(prompt)

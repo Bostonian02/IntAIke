@@ -67,4 +67,5 @@ def giveData():
 
 @app.post("/api/monetaryValue")
 def doAIStuff():
-    return get_monetary_value()
+    data = request.json
+    return get_monetary_value(data["case_type"])
