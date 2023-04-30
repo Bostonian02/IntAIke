@@ -1,14 +1,20 @@
 const USER = true;
 const BOT = false;
-var globalMod = 1;
+// var globalMod = 1
 
-const postMessage = async () => {
+// user parameter is meant to be a boolean. USER is true and BOT is false
+const postMessage = async (user) => {
     const chatBar = document.getElementById('userInput');
     const chatSection =document.getElementById('chatSection')
     if(chatBar.value === "")
         return;
-    var message = makeMessage(chatBar.value, globalMod++%2 == 0?USER:BOT);
+    var message = makeMessage(chatBar.value, user);
     chatSection.innerHTML+='<div class="messageRow">'+message+'</div>';
+    
+    chatSection.scroll({
+        top: 10000000000,
+        behavior: "smooth",
+      }); 
 
     var obj = { message: chatBar.value };
     var js = JSON.stringify(obj);
@@ -26,7 +32,6 @@ const postMessage = async () => {
     {
         console.log(e)
     }
-    window.scrollY
 }
 
 function makeMessage(message, user){
