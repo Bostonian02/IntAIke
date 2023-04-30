@@ -10,16 +10,16 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
-        <link rel="icon" href="images/QuickCaseFavicon.png" type="image/x-icon" />
-        <link rel="stylesheet" href="stylesheets/chat.css">
+        <link rel="icon" href="{{url_for('static', filename='images/QuickCaseFavicon.png')}}" type="image/x-icon" />
+        <link rel="stylesheet" href="{{url_for('static', filename='stylesheets/chat.css')}}">
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     </head>
     <body>
-        <script src="scripts/chat.js"></script>
+        <script src="{{url_for('static', filename='scripts/chat.js')}}"></script>
             <div id="topBar">
-                <img id="textLogo" src="images/QuickCaseLogoText.png"/>
+                <img id="textLogo" src="{{url_for('static', filename='images/QuickCaseLogoText.png')}}"/>
             </div>
 
             <div id="chatSection"></div>
