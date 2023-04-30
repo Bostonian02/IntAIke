@@ -14,6 +14,7 @@ body{
     background-color: var(--MMNavy);
     text-align: center;
     background-position: var(--x) var(--y);
+    overflow-y:clip;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -142,3 +143,100 @@ height: 50%;
         margin-top:6vh;
     }
 }
+
+#caseSelector{
+    transition: transform 2s ease-in, opacity 0.7s;
+}
+
+.slider{
+ transform: translateY(-500px);
+ opacity:0;
+ animation-name:slideup;
+ animation-delay:1s;
+}
+
+#caseTypeForm{
+    transition:1s;
+}
+
+.closer{
+    height:35vh;
+}
+
+@keyframes slideup {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+    }
+  }
+
+  #intakeMethods{
+    display:none;
+    text-align:center;
+    width:100% !important;
+    justify-content: center;
+  }
+
+  .moveup{
+    transform:translateY(-225px);
+  }
+  .imgButton{
+    max-width: 7vw;
+  }
+  .newButtons{
+    background-color: transparent;
+    color:var(--MMYellow);
+    border:none;
+    font-size: 1.45em;
+    padding:6px;
+    width:12vw;
+  }
+
+  .newButtons:hover{
+    background-color: var(--MMYellow);
+    border:none;
+    color:var(--MMNavy);
+  }
+
+  .newButtons:hover>img{
+    filter:  hue-rotate(161deg) saturate(76%) brightness(31%);
+  }
+
+  .spacer{
+    width:10%;
+  }
+
+  .liner{
+    display:inline-block;
+  }
+
+  #altLogo{
+    width:40%;
+    filter: drop-shadow(3px 3px 2px #000000);
+  }
+
+  #colorBox{
+    background-color: rgba(19,42,62, 0.9);
+    width:70vw; 
+    padding-top:0px !important;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+    border-radius: 30px;
+    filter: drop-shadow(3px 3px 2px rgba(19,42,62, 0.5));
+  }
+
+  #blurb{
+    color:white;
+    font-size: 1.25em;
+  }
+
+  li{
+    list-style-type: none;
+    color:white;
+    font-size:1.25em;
+  }
