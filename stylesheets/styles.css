@@ -8,21 +8,26 @@ html{
 }
 
 body{
+    --x:0px;
+    --y:0px;
     background-image:url("../images/Background1.png");
     background-color: var(--MMNavy);
     text-align: center;
+    background-position: var(--x) var(--y);
     font-family: 'Open Sans', sans-serif;
 }
 
 select{
     appearance: none;
-    height:7vh;
-    font-size:2.25em;  
+    height:9vh;
+    font-size:2em;  
     background-color: transparent;
     color:var(--MMYellow);
     border-color: var(--MMYellow);
     border-radius: 17px;
     padding-left: 5px;
+    padding-top:5px;
+    padding-bottom:5px;
     filter: drop-shadow(3px 3px 2px #000000);
 }
 
@@ -65,7 +70,6 @@ height: 50%;
     padding-bottom: 20px;
     border-radius: 30px;
     filter: drop-shadow(3px 3px 2px rgba(19,42,62, 0.5));
-
 }
 
 #plug{
@@ -128,4 +132,13 @@ height: 50%;
     border-color:var(--MMYellow);
     border:1px solid var(--MMYellow);
     padding:10px;
+}
+
+@media screen and (max-width: 2000px) {
+    #contrastContainer{
+        scale:0.9;
+    }
+    #logoBox{
+        margin-top:6vh;
+    }
 }
