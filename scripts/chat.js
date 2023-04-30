@@ -10,8 +10,8 @@ const postMessage = async () => {
     var message = makeMessage(chatBar.value, globalMod++%2 == 0?USER:BOT);
     chatSection.innerHTML+='<div class="messageRow">'+message+'</div>';
 
-    var obj = { message: chatBar.value }
-    var js = JSON.stringify(obj)
+    var obj = { message: chatBar.value };
+    var js = JSON.stringify(obj);
 
     try
     {
@@ -26,6 +26,7 @@ const postMessage = async () => {
     {
         console.log(e)
     }
+    window.scrollY
 }
 
 function makeMessage(message, user){
