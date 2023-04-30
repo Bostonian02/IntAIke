@@ -20,18 +20,28 @@ body{
 }
 
 #textLogo{
-   height: 20px;
+   height: 80%;
+   margin-top:5px;
+   margin-bottom:auto;
+   margin-left:10px;
 }
 
 #inputBar{
    position: relative;
    bottom: 0px;
    width: 100%;
-   /* display: inline-block; */
+   display:inline-flex;
    background-color: var(--MMBlue);
    margin-left:0;
    padding-left:10px;
    height:8vh;
+}
+
+#inputHolder{
+   margin:auto;
+   width:90%;
+   align-items: center;
+   justify-content: center;
 }
 
 #userInput{
@@ -40,13 +50,18 @@ body{
    height:30px;
    padding-left:10px;
    padding-right:10px;
-   border-radius:20px;
-   margin:auto;
+   border-radius:20px 0px 0px 20px;
+   margin-left:auto;
+   margin-right:0px;
 }
 
 #sendButton{
    display: inline-block;
    background-color: var(--MMYellow);
+   border-radius:0px 20px 20px 0px;
+   margin-right:auto;
+   margin-left:0px;
+
 }
 
 #chatSection{
