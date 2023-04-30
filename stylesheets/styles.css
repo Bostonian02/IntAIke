@@ -3,9 +3,11 @@
     --MMNavy:#132a3e;
     --MMBlue:#115099;
 }
+html{
+    height:100vh;
+}
 
 body{
-    /* background-image: linear-gradient(to right, var(--MMNavy) , var(--MMBlue)); */
     background-image:url("../images/Background1.png");
     background-color: var(--MMNavy);
     text-align: center;
@@ -24,12 +26,9 @@ select{
     filter: drop-shadow(3px 3px 2px #000000);
 }
 
-.dropdown{
-    
-}
-
 option{
-    background-color: transparent;
+    background-color: var(--MMNavy);
+    font-size:0.6em;
 }
 
 #Mmlogo{
@@ -52,7 +51,7 @@ height: 50%;
 
 #textLogo{
     width:70%;
-    filter: drop-shadow(3px 3px 4px #000000);
+    filter: drop-shadow(3px 3px 2px #000000);
     /* min-width: 80%;
     max-width: fit-content; */
 }
@@ -65,6 +64,8 @@ height: 50%;
     margin-right:auto;
     padding-bottom: 20px;
     border-radius: 30px;
+    filter: drop-shadow(3px 3px 2px rgba(19,42,62, 0.5));
+
 }
 
 #plug{
