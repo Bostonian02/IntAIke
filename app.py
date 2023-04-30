@@ -15,7 +15,12 @@ def pick_response():
 def hello():
     return render_template('input.html')
 
+@app.route("/referrals")
+def goodbye():
+    return render_template('referrals.html')
+
 @app.post("/api/sendMessage")
 def doTheThing():
     data = request.json
     return pick_response()
+
