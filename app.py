@@ -1,34 +1,21 @@
 # Imports
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_cors import CORS
 import sqlite3 as sql
+import random
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 CORS(app)
 
+def pick_response():
+    respones = ["Hello I am real Chatbot", "You are definitely talking to a chat bot right now (wink wink)", "What up, it's Automated CJ"]
+    return (random.choice(respones))
+
 @app.route("/")
-# def hello_world():
-#     try:
-#         my_list = []
-#         # Connect to the database
-#         con = sql.connect('Cases.db')
-
-#         # Get the cursor
-#         c = con.cursor()
-
-#         #Add data
-#         cursor = c.execute("SELECT NAME FROM CASES")
-#         for row in cursor:
-#             my_list.append(row)
-
-#         con.close()
-
-#         return my_list
-#     except Exception as e:
-#         return e
 def hello():
     return render_template('input.html')
 
-@app.route("/referrals")
-def display():
-    return render_template('referrals.html')
+@app.post("/api/sendMessage")
+def doTheThing():
+    data = request.json
+    return pick_response()

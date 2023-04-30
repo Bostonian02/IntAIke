@@ -4,28 +4,29 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Int-AI-ke</title>
+        <title>Quick Case</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="icon" href="https://brand.umich.edu/assets/brand/style-guide/logo-guidelines/U-M_Logo-Hex.png" type="image/x-icon" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/styles.css') }}">
+        <link rel="icon" href="images/QuickCaseFavicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="stylesheets/styles.css">
     </head>
     <body>
             <div id="logoBox">
-                <h1 class="playfair white">Hello, and welcome to:</h1>
-                <h1 class="yellow">Your Logo Here</h1>
-                <p id="plug" class="white openSans">A (potential) <img id="Mmlogo" src="{{ url_for('static', filename='images/Morgan and Morgan Logo.svg') }}"/> technology</p>
+                <h1 id="welcome" class="openSans white">Hello, welcome to:</h1>
+                <img id="textLogo" src="images/QuickCaseLogoText.png"/>
+                <p id="plug" class="white openSans">A (potential) <img id="Mmlogo" src="images/Morgan and Morgan Logo.svg"/> technology</p>
             </div>
             <h2 class="white">Please select your case type.</h2>
-            <form>
+            <form action="chat.html">
                 <div class="dropdown">
                     <select  name="caseType" id="caseType">
+                        <option disabled selected value="">Select Case Type</option>
                         <option value="Animal Attack">Animal Attack</option>
                         <option value="Business Dispute">Business Dispute</option>
-                        <option selected value="Car Accident">Car Accident</option>
+                        <option value="Car Accident">Car Accident</option>
                         <option value="Civil Rights">Civil Rights</option>
                         <option value="Childhood Sex Abuse">Childhood Sex Abuse</option>
                         <option value="Class Action">Class Action</option>

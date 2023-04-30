@@ -1,0 +1,129 @@
+:root{
+   --MMYellow: #fceb09;
+   --MMNavy:#132a3e;
+   --MMBlue:#115099;
+   --MMLightBlue:#b3c9df;
+}
+html{
+   height:100vh;
+}
+
+body{
+   margin:0px;
+   overflow:hidden;
+   height:100vh;
+}
+
+#Mmlogo{
+   height: 50%;
+}
+
+#topBar{
+   background-color: var(--MMBlue);
+   height: 8vh;
+}
+
+#textLogo{
+   height: 80%;
+   margin-top:5px;
+   margin-bottom:auto;
+   margin-left:10px;
+}
+
+#inputBar{
+   position: relative;
+   bottom: 0px;
+   height: 50px;
+   width: 100%;
+   display:inline-flex;
+   background-color: var(--MMBlue);
+   margin-left:0;
+   padding-left:10px;
+   height:8vh;
+}
+
+#inputHolder{
+   margin:auto;
+   width:90%;
+   align-items: center;
+   justify-content: center;
+}
+
+#userInput{
+   display: inline-block;
+   width:80%; 
+   height:30px;
+   padding-left:10px;
+   padding-right:10px;
+   border-radius:20px 0px 0px 20px;
+   margin-left:5%;
+   margin-right:-5px;
+   vertical-align: middle;
+   border:none;
+}
+
+#sendButton{
+   display: inline-block;
+   background-color: var(--MMYellow);
+   border-radius:0px 20px 20px 0px;
+   margin-right:5%;
+   margin-left:0px;
+   border:none;
+   height:32px;
+   vertical-align: middle;
+}
+
+#chatSection{
+   width:auto;
+   height:82vh;
+   padding-top:1vh;
+   padding-bottom:1vh;
+   padding-left: 2vw;
+   padding-right:2vw;
+   overflow-y:scroll !important;
+   margin-right:0px;
+   display:flex;
+   min-height:0;
+   max-height:82vh;
+   flex-direction: column;
+   /* justify-content: flex-end; */
+}
+
+.messageRow:nth-child(1){
+   margin-top:auto;
+   margin-bottom:0;
+}
+
+.message{
+   padding:10px;
+   padding-left: 20px;
+   padding-right: 20px;
+   border-radius: 20px;
+   width:fit-content;
+   max-width:30%;   
+   overflow-wrap: break-word;
+   margin-bottom:10px;
+   text-align: left;
+   order:1;
+}
+
+.user{
+   background-color:var(--MMLightBlue);
+   color:white;
+   margin-right: 0;
+   margin-left: auto;
+}
+
+.bot{
+   background-color:var(--MMYellow);
+   color:black;
+   margin-right: auto;
+   margin-left: 0;
+}
+.messageRow{
+   width:100%;
+   display: inline-flex;
+   align-self: flex-end;
+   justify-content: normal;
+   margin-top:0;
+}

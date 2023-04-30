@@ -1,5 +1,5 @@
 :root{
-    --MMyellow: #fceb09;
+    --MMYellow: #fceb09;
     --MMNavy:#132a3e;
     --MMBlue:#115099;
 }
@@ -12,13 +12,14 @@ body{
 }
 
 select{
+    appearance: none;
     height:7vh;
     font-size:2.25em;  
     background-color: transparent;
-    color:var(--MMyellow);
-    border-color: var(--MMyellow);
+    color:var(--MMYellow);
+    border-color: var(--MMYellow);
     border-radius: 17px;
-    appearance: none;
+    padding-left: 5px;
 }
 
 .dropdown{
@@ -30,31 +31,38 @@ option{
 }
 
 #Mmlogo{
-    /* position: absolute;
-    bottom:10px;
-    right:10px; */
+height: 50%;
+}
+
+
+#welcome{
+    height:10%;
+    margin-top:0px;
+}
+
+#textLogo{
+    height:70%;
+    /* min-width: 80%;
+    max-width: fit-content; */
 }
 
 #plug{
-    align-content: baseline;
-    justify-content: baseline;
-    align-items: baseline;
+    font-size: small;
+    height:10%;
 }
-
 #logoBox{
+    /* background-color: #fceb09; */
     color:var(--MMBlue);
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-}
-
-#logoBox{
-    /* background-color: #fceb09; */
+    height:45vh !important;
     margin:auto;
-    width:50vw;
-    height:20vh;
+    height:auto;
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-bottom:5vh;
+    margin-top:10vh;
 }
 
 #ButtonBox{
@@ -76,24 +84,26 @@ option{
 }
 
 .yellow{
-    color:var(--MMyellow);
+    color:var(--MMYellow);
 }
 
 .roundButton{
-    background-color: var(--MMyellow);
+    background-color: var(--MMYellow);
     color:var(--MMNavy);
     font-size: 1.5em;
     border:none;
     border-radius: 30px;
     padding:10px;
     text-decoration: none;
+    transition: 0.15s;
+
 }
 
 .roundButton:hover{
     background-color: transparent;
-    color:var(--MMyellow);
+    color:var(--MMYellow);
     font-size: 1.5em;
-    border-color:var(--MMyellow);
-    border:1px solid var(--MMyellow);
+    border-color:var(--MMYellow);
+    border:1px solid var(--MMYellow);
     padding:10px;
 }

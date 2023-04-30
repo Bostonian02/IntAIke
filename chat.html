@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
 <html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Int-AI-ke</title>
+        <title>Quick Case</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images/QuickCaseFavicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="stylesheets/chat.css">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     </head>
     <body>
+        <script src="scripts/chat.js"></script>
             <div id="topBar">
-                <h3>add Logo here on left corner</h3>
+                <img id="textLogo" src="images/QuickCaseLogoText.png"/>
             </div>
 
+            <div id="chatSection"></div>
+
             <div id="inputBar">
-               This goes below->
-               <input type="text" id="userInput"><br>
-               <button type="button">Up ARROW</button>
-            </div>
-            
-        
+                <div id="inputHolder">
+                    <input id="userInput" type="text" placeholder="Your message to QuickCase..." name="userInput">
+                    <button id="sendButton" onclick="postMessage(true)" type="button">
+                        <i class="material-icons">arrow_upward</i>
+                    </button>
+                </div>
+            </div> 
     </body>
 </html>
