@@ -16,7 +16,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Define which tools the agent can use to answer user queries
-db = SQLDatabase.from_uri("sqlite:///Intakes.db")
+search = SerpAPIWrapper()
+db = SQLDatabase.from_uri("sqlite:///C:/users/saget/Desktop/Hackathon/notebooks/Intakes.db")
 toolkit = SQLDatabaseToolkit(llm=OpenAI(temperature=0), db=db)
 
 # Tools
@@ -37,7 +38,7 @@ human_tools = load_tools(
 human_agent_chain = initialize_agent(
     human_tools,
     llm,
-    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    agent=AgentType.CHAT_ZERO_SHOT_REACT_DESCRIPTION,
     verbose=True,
 )
 
@@ -46,37 +47,34 @@ tools = [
     Tool(
         name="SQL",
         func=SQL_agent_executor.run,
-        description="Useful for adding and retrieving information from databases"
+        description="Useful for adding, modifying, and retrieving information from databases using DML"
     ),
     Tool(
         name="Human",
         func=human_agent_chain.run,
-        description="Useful for getting information to add to the database"
+        description="Useful for asking the humans personal information"
     ),
 ]
 
 # Set up the base template
-template = """You are a chat bot meant to help users interact with a database. You take client information and add it to the database.
-The client is the user filling out their own information, so you should address them in a friendly and converstaional manner.
-Start by querying the database to determine what items in each table need to be filled out.
-Fill out a row by asking a human user for the data. Once you have that data, add it to the database. Continue asking the user for data until you are done.
-You are done once you have filled out one row in the Clients table and one row in the Incidents table.
-YOU DO NOT NEED THE CLIENT'S PREFFERED METHOD OF COMMUNICATION!!!
+template = """You are a chatbot that is designed to do client intake at a law firm.
+As a chatbot, you are having a conversation with the client in order to gather the requisite information from them to fill a row in the database.
+Start by querying the database to find out what information you are looking for in order to fill a row in the Client table and the Incident table.
+Ask the human questions based off the column names and then add the human's answers to the database.
+
+YOU SHOULD NOT WRAP THE THOUGHT, ACTION, ACTION INPUT, OR TOOL NAMES IN BRACKETS!!
+
 You have access to the following tools:
-
 {tools}
-
 Use the following format:
-
 Question: the input question you must answer
 Thought: you should always think about what to do
-Action: the action to take, should be one of [{tool_names}]
+Action: the action to take, should be one of {tool_names} (do not under any circumstance wrap these tool names in brackets)
 Action Input: the input to the action
 Observation: the result of the action
 ... (this Thought/Action/Action Input/Observation can repeat N times)
 Thought: I now know the final answer
 Final Answer: the final answer to the original input question
-
 Question: {input}
 {agent_scratchpad}"""
 
@@ -100,7 +98,7 @@ class CustomPromptTemplate(BaseChatPromptTemplate):
         # Create a tools variable from the list of tools provided
         kwargs["tools"] = "\n".join([f"{tool.name}: {tool.description}" for tool in self.tools])
         # Create a list of tool names for the tools provided
-        kwargs["tool_names"] = ", ".join([tool.name for tool in self.tools])
+        kwargs["tool_names"] = " or ".join([tool.name for tool in self.tools])
         formatted = self.template.format(**kwargs)
         return [HumanMessage(content=formatted)]
     
@@ -150,4 +148,4 @@ agent = LLMSingleActionAgent(
 
 agent_executor = AgentExecutor.from_agent_and_tools(agent=agent, tools=tools, verbose=True)
 
-agent_executor.run("Fill out all of the information in the database for one client and one incident had by that client. Ask the human user for input any time you don't have information.")
+agent_executor.run("Fill out all of the information in the database for one client and one incident had by that user. Ask the human user for input any time you don't have information")
