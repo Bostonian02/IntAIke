@@ -4,10 +4,14 @@
    --MMBlue:#115099;
    --MMLightBlue:#b3c9df;
 }
+html{
+   height:100vh;
+}
 
 body{
    margin:0px;
    overflow:hidden;
+   height:100vh;
 }
 
 #Mmlogo{
@@ -76,8 +80,18 @@ body{
    padding-bottom:1vh;
    padding-left: 2vw;
    padding-right:2vw;
-   overflow-y:scroll;
+   overflow-y:scroll !important;
    margin-right:0px;
+   display:flex;
+   min-height:0;
+   max-height:82vh;
+   flex-direction: column;
+   /* justify-content: flex-end; */
+}
+
+.messageRow:nth-child(1){
+   margin-top:auto;
+   margin-bottom:0;
 }
 
 .message{
@@ -92,6 +106,7 @@ body{
    text-align: left;
    order:1;
 }
+
 .user{
    background-color:var(--MMLightBlue);
    color:white;
@@ -108,4 +123,7 @@ body{
 .messageRow{
    width:100%;
    display: inline-flex;
+   align-self: flex-end;
+   justify-content: normal;
+   margin-top:0;
 }
