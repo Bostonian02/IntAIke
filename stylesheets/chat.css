@@ -19,7 +19,7 @@ body{
 }
 
 #textLogo{
-   height: 30px;
+   height: 20px;
 }
 
 #inputBar{
@@ -55,6 +55,7 @@ body{
    overflow-wrap: break-word;
    margin-bottom:10px;
 }
+
 .user{
    background-color:var(--MMLightBlue);
    color:white;
