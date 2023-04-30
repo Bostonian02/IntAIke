@@ -21,10 +21,9 @@
                 <img id="textLogo" src="images/QuickCaseLogoText.png"/>
                 <p id="plug" class="white openSans shadowThin">A (potentially) <img id="Mmlogo" src="images/Morgan and Morgan Logo.svg"/> technology</p>
             </div>
-            <div>
-
-                <h2 class="white shadowThin">Please select your case type.</h2>
-                <form action="inputForm.html" >
+            <form action="inputForm.html" id="caseTypeForm">
+                <div id="caseSelector" class="">
+                    <h2 class="white shadowThin">Please select your case type.</h2>
                     <div class="dropdown">
                         <select  name="caseType" id="caseType">
                             <option disabled selected value="">Select Case Type</option>
@@ -59,10 +58,17 @@
                         </select>
                     </div>
                     <br><br>
-                    <button class="roundButton playfair" onclick="">Confirm</button> &nbsp;&nbsp;
+                    <button class="roundButton playfair" onclick="event.preventDefault(); switchIn()">Confirm</button> &nbsp;&nbsp;
                     <a class="roundButton playfair" href="referrals.html">Don't See Your Case Type?</a>
-                </form>
-            </div>
+                </div>
+                <div id="intakeMethods">
+                    <h2 class="white shadowThin" style="display:block;">Please select your input method</h2>
+                    <div style="width:100%;"></div>
+                    <button class="playfair newButtons liner" onclick="event.preventDefault(); window.location.replace('chat.html')"><img class="imgButton" src="images/chaticon.png"><br>Chatbot</button>
+                    <div class="spacer liner"></div>
+                    <button class="playfair newButtons liner" onclick=""><img class="imgButton" src="images/formicon.png"><br>Form Entry</button>
+                </div>
+            </form>
         </div>
         <script src="" async defer></script>
     </body>
