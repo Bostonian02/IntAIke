@@ -3,18 +3,30 @@ const BOT = false;
 // var globalMod = 1
 
 // user parameter is meant to be a boolean. USER is true and BOT is false
-const postMessage = async (user) => {
+const postMessage = async () => {
     const chatBar = document.getElementById('userInput');
     const chatSection =document.getElementById('chatSection')
     if(chatBar.value === "")
         return;
-    var message = makeMessage(chatBar.value, user);
+    var message = makeMessage(chatBar.value, true);
     chatSection.innerHTML+='<div class="messageRow">'+message+'</div>';
     
     chatSection.scroll({
         top: 10000000000,
         behavior: "smooth",
-      }); 
+      });
+    
+    var response = await sendMessage();
+    chatSection.innerHTML+='<div class="messageRow">'+response+'</div>';
+
+    chatSection.scroll({
+        top: 10000000000,
+        behavior: "smooth",
+    });
+}
+
+const sendMessage = async () => {
+    const chatBar = document.getElementById('userInput');
 
     var obj = { message: chatBar.value };
     var js = JSON.stringify(obj);
@@ -24,13 +36,13 @@ const postMessage = async (user) => {
         var response = await fetch('http://127.0.0.1:5000/api/sendMessage',
         { method: 'POST', body: js, headers: { 'Content-Type': 'application/json' } });
 
-        var res = await response.text()
+        var res = await response.text();
 
-        console.log(res);
+        return makeMessage(res, false);
     }
     catch (e)
     {
-        console.log(e)
+        console.log(e);
     }
 }
 
