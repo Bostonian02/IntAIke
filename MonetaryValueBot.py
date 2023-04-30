@@ -42,7 +42,8 @@ def get_monetary_value(case_type):
     suffix="""Your goal is to give a rough estimate of how much money a case could make based on the data in the database.
     Your estimate does not have to be a perfect average. Your estimate should take into account the severity of the incident based on its description.
     If the incident was worse relative to the example descriptions in the database, the amount of money that could be won should be larger.
-    Remember to give either a range or a single value as your final answer. Begin!
+    Once you find the average STOP and that is your final answer.
+    Remember to give a single value as your final answer. Begin!
     Question: {input}
     {agent_scratchpad}"""
 
