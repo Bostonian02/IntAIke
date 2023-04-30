@@ -1,5 +1,5 @@
 :root{
-   --MMyellow: #fceb09;
+   --MMYellow: #fceb09;
    --MMNavy:#132a3e;
    --MMBlue:#115099;
    --MMLightBlue:#b3c9df;
@@ -7,6 +7,7 @@
 
 body{
    margin:0px;
+   overflow:hidden;
 }
 
 #Mmlogo{
@@ -15,7 +16,7 @@ body{
 
 #topBar{
    background-color: var(--MMBlue);
-   height: 40px;
+   height: 8vh;
 }
 
 #textLogo{
@@ -29,20 +30,28 @@ body{
    display: inline-block;
    background-color: var(--MMBlue);
    margin-left:0;
+   padding-left:10px;
+   height:8vh;
 }
 
 #userInput{
    display: inline-block;
+   width:80%; 
+   height:30px;
+   padding-left:10px;
+   padding-right:10px;
+   border-radius:20px;
+   margin:auto;
 }
 
 #sendButton{
    display: inline-block;
-   background-color: var(--MMyellow);
+   background-color: var(--MMYellow);
 }
 
 #chatSection{
    width:100%;
-   display: inline-flex;
+   height:84vh;
 }
 
 .message{
@@ -54,11 +63,24 @@ body{
    max-width:30%;   
    overflow-wrap: break-word;
    margin-bottom:10px;
+   text-align: left;
+   order:1;
 }
+
 .user{
    background-color:var(--MMLightBlue);
    color:white;
-   text-align: left;
    margin-right: 0;
    margin-left: auto;
+}
+
+.bot{
+   background-color:var(--MMYellow);
+   color:black;
+   margin-right: auto;
+   margin-left: 0;
+}
+.messageRow{
+   width:100%;
+   display: inline-flex;
 }

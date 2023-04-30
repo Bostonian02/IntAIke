@@ -1,14 +1,14 @@
 const USER = true;
 const BOT = false;
-
+var globalMod = 1;
 
 const postMessage = async () => {
     const chatBar = document.getElementById('userInput');
     const chatSection =document.getElementById('chatSection')
     if(chatBar.value === "")
         return;
-    var message = makeMessage(chatBar.value, USER);
-    chatSection.innerHTML+=message+"<br><br>";
+    var message = makeMessage(chatBar.value, globalMod++%2 == 0?USER:BOT);
+    chatSection.innerHTML+='<div class="messageRow">'+message+'</div>';
 
     var obj = { message: chatBar.value }
     var js = JSON.stringify(obj)
