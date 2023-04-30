@@ -24,21 +24,25 @@ body{
 } */
 
 .formHolder{
-    width:80%;
+    width:65% !important;
     border:solid var(--MMYellow) 2px;
-    border-radius: 8px;;
+    border-radius: 8px;
     margin:auto;
+    margin-top:5vh;
     background-color: #132a3e;
+    padding-bottom:15px;
+    text-align: center;
 }
 
 .formField{
-    background-color: transparent;
-    height:5vh;
     color:var(--MMYellow);
+    background-color: transparent;
+    height:5.5vh;
     border:solid 2px;
     border-color: var(--MMYellow);
     border-radius: 17px;
     margin-bottom:10px;
+    padding-left:5px;
     font-size:1.3em !important;
 }
 
@@ -48,7 +52,11 @@ body{
     border:none;
 }
 
-input::placeholder{
+.formField:focus::placeholder{
+    color: var(--MMNavy);
+}
+
+.formField::placeholder{
     color:white;
     opacity:0.7;
 }
@@ -57,11 +65,18 @@ input::placeholder{
     color:white;
     display: inline-block;
     width:fit-content;
-    margin:0px;
+    vertical-align: middle;
 }
 
 option{
-    background-color: transparent;
+    background-color: var(--MMNavy);
+    color:var(--MMYellow);
+}
+
+.checker{
+    height:20px;
+    vertical-align: middle !important;
+    margin-top:2%;
 }
 
 #Mmlogo{
@@ -111,6 +126,10 @@ height: 50%;
     color:var(--MMYellow);
 }
 
+.centered{
+    text-align: center;
+}
+
 .roundButton{
     background-color: var(--MMYellow);
     color:var(--MMNavy);
@@ -133,13 +152,37 @@ height: 50%;
 }
 
 #PoliceForm{
-    display: "";
-    /* opacity:0.8; */
+    display: none;
     transition: 0.5s; 
 }
 
+input[type="time"]{
+    color:white;
+justify-content: right;}
+
+input[type="time"]::-webkit-calendar-picker-indicator{
+    filter: invert(100%);
+  }
+
+input[type="time"]:focus::-webkit-calendar-picker-indicator{
+    filter: none;
+  }
+input[type="date"]{
+    color:white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+    filter: invert(100%);
+  }
+
+input[type="date"]:focus::-webkit-calendar-picker-indicator{
+    filter: none;
+  }
+
+
+
 #MedicalForm{
-    display:"";
+    display:none;
 }
 
 
@@ -173,4 +216,10 @@ height: 50%;
 
 #Injured{
     vertical-align: middle;
+
+
+}
+
+#IncidentDateLabel{
+    color:white;
 }

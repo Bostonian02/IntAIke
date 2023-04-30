@@ -39,7 +39,7 @@ height: 50%;
 
 #welcome{
     height:10%;
-    margin-top:0px;
+    margin-top:10px;
 }
 
 .shadowLight{
@@ -51,10 +51,20 @@ height: 50%;
 }
 
 #textLogo{
-    height:70%;
+    width:70%;
     filter: drop-shadow(3px 3px 4px #000000);
     /* min-width: 80%;
     max-width: fit-content; */
+}
+
+#contrastContainer{
+    background-color: rgba(19,42,62, 0.9);
+    width:50vw; 
+    padding-top:0px !important;
+    margin-left:auto;
+    margin-right:auto;
+    padding-bottom: 20px;
+    border-radius: 30px;
 }
 
 #plug{
@@ -66,7 +76,7 @@ height: 50%;
     color:var(--MMBlue);
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    height:45vh !important;
+    height:45vh;
     margin:auto;
     height:auto;
     align-items: center;
